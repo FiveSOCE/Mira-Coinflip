@@ -7,8 +7,8 @@ repositories {
     maven("https://jitpack.io")
 }
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:26.2.build.+")
+    compileOnly("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
     compileOnly("com.github.MilkBowl:VaultAPI:1.7")
 }
-java { toolchain.languageVersion.set(JavaLanguageVersion.of(25)) }
-tasks.jar { archiveBaseName.set("Mira-Coinflip-26.2") }
+java { toolchain.languageVersion.set(JavaLanguageVersion.of(17)) }
+tasks.jar { archiveBaseName.set("Mira-Coinflip-1.18") }
