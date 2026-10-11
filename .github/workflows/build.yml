@@ -1,9 +1,11 @@
-name: Build
+name: Build and Publish Dev JAR
 on:
   push:
-    branches: [main, 'feature/**', 'compat/**']
-  pull_request:
+    branches:
+      - 'feature/coinflip-26.2'
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,9 +16,23 @@ jobs:
           distribution: temurin
           java-version: '25'
       - uses: gradle/actions/setup-gradle@v4
-      - name: Build plugin jar
+        with:
+          gradle-version: '9.2.1'
+      - name: Compile plugin
         run: gradle clean build --no-daemon
+      - name: Check JAR contents
+        run: |
+          test -s build/libs/Mira-Coinflip-26.2-0.1.0-dev.jar
+          jar tf build/libs/Mira-Coinflip-26.2-0.1.0-dev.jar | grep -Fx 'plugin.yml'
+          jar tf build/libs/Mira-Coinflip-26.2-0.1.0-dev.jar | grep -Fx 'com/fivesoce/mira/coinflip/MiraCoinflip.class'
       - uses: actions/upload-artifact@v4
         with:
           name: Mira-Coinflip-26.2
-          path: build/libs/*.jar
+          path: build/libs/Mira-Coinflip-26.2-0.1.0-dev.jar
+          if-no-files-found: error
+      - name: Publish development JAR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view 'dev-26.2' >/dev/null 2>&1 || gh release create 'dev-26.2' --prerelease --title 'Mira-Coinflip 26.2 development' --notes 'Development preview only; wagering is disabled pending escrow implementation.' --target "$GITHUB_SHA"
+          gh release upload 'dev-26.2' build/libs/Mira-Coinflip-26.2-0.1.0-dev.jar --clobber
