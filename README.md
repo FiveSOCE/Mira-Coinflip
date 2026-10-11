@@ -12,14 +12,18 @@ Mira-Coinflip is designed for item wagers, matched Vault-backed money wagers, es
 
 [View releases](https://github.com/FiveSOCE/Mira-Coinflip/releases)
 
-## Downloads
+## JAR Downloads
 
-| Target | Source | Development JAR builds |
-| --- | --- | --- |
-| Paper 26.2 (Java 25) | [26.2 branch](https://github.com/FiveSOCE/Mira-Coinflip/tree/feature/coinflip-26.2) | [26.2 build runs](https://github.com/FiveSOCE/Mira-Coinflip/actions?query=branch%3Afeature%2Fcoinflip-26.2) |
-| Paper 1.18.2 (Java 17) | [1.18 branch](https://github.com/FiveSOCE/Mira-Coinflip/tree/compat/1.18) | [1.18 build runs](https://github.com/FiveSOCE/Mira-Coinflip/actions?query=branch%3Acompat%2F1.18) |
+**No downloadable JAR has been published yet.** The development branches have not been confirmed to build successfully, and no verified JAR release asset exists. A workflow page or source-code archive is **not** a JAR download.
 
-To download a development JAR, open a build-runs link, select a **successful** `Build` workflow and download the corresponding artifact under **Artifacts**. Extract the archive to access the JAR. Artifact availability and build success have **not yet been verified**.
+When build-verified releases are published, their **direct `.jar` download links** will be listed here, separately for:
+
+- **Paper 26.2 (Java 25)** — [development source](https://github.com/FiveSOCE/Mira-Coinflip/tree/feature/coinflip-26.2)
+- **Paper 1.18.2 (Java 17)** — [compatibility source](https://github.com/FiveSOCE/Mira-Coinflip/tree/compat/1.18)
+
+[Published GitHub releases](https://github.com/FiveSOCE/Mira-Coinflip/releases) (currently no verified stable JAR).
+
+Do not install a source archive or assume that a GitHub Actions page downloads a plugin JAR.
 
 ## Requirements
 
