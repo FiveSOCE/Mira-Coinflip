@@ -1,0 +1,13 @@
+name: Mira-Coinflip
+main: com.fivesoce.mira.coinflip.MiraCoinflip
+version: 0.1.0-dev
+api-version: '26.2'
+author: FiveSOCE
+softdepend: [Vault]
+commands:
+  cf:
+    description: Coinflip games, storage, history and self-exclusion
+    usage: /cf [hand|collect|cancel|history|exclude|amount]
+permissions:
+  miracoinflip.use:
+    default: true
