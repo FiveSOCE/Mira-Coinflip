@@ -1,7 +1,7 @@
 name: Mira-Coinflip
 main: com.fivesoce.mira.coinflip.MiraCoinflip
 version: 0.1.0-dev
-api-version: '26.2'
+api-version: '1.18'
 author: FiveSOCE
 softdepend: [Vault]
 commands:
