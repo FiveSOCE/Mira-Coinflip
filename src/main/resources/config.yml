@@ -1,0 +1,7 @@
+# Economy mode requires Vault and a compatible economy provider.
+money-enabled: true
+max-offer-items: 10
+minimum-exclusion-days: 10
+rolling-animation-ticks: 80
+messages:
+  prefix: "&6&lMira Coinflip &8» &r"
