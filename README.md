@@ -14,16 +14,16 @@ Mira-Coinflip is designed for item wagers, matched Vault-backed money wagers, es
 
 ## JAR Downloads
 
-**No downloadable JAR has been published yet.** The development branches have not been confirmed to build successfully, and no verified JAR release asset exists. A workflow page or source-code archive is **not** a JAR download.
+Both development JARs have been **compiled successfully by GitHub Actions** and published as directly downloadable GitHub release assets.
 
-When build-verified releases are published, their **direct `.jar` download links** will be listed here, separately for:
+| Minecraft version | Direct JAR download | Java |
+| --- | --- | --- |
+| Paper 26.2 | **[Download Mira-Coinflip-26.2-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-Coinflip/releases/download/dev-26.2/Mira-Coinflip-26.2-0.1.0-dev.jar)** | Java 25 |
+| Paper 1.18.2 | **[Download Mira-Coinflip-1.18-0.1.0-dev.jar](https://github.com/FiveSOCE/Mira-Coinflip/releases/download/dev-1.18/Mira-Coinflip-1.18-0.1.0-dev.jar)** | Java 17 |
 
-- **Paper 26.2 (Java 25)** — [development source](https://github.com/FiveSOCE/Mira-Coinflip/tree/feature/coinflip-26.2)
-- **Paper 1.18.2 (Java 17)** — [compatibility source](https://github.com/FiveSOCE/Mira-Coinflip/tree/compat/1.18)
+These links download the actual `.jar` files, not an Actions artifact ZIP, GitHub workflow page or source archive. Builds are published from the corresponding [26.2](https://github.com/FiveSOCE/Mira-Coinflip/tree/feature/coinflip-26.2) and [1.18](https://github.com/FiveSOCE/Mira-Coinflip/tree/compat/1.18) branches.
 
-[Published GitHub releases](https://github.com/FiveSOCE/Mira-Coinflip/releases) (currently no verified stable JAR).
-
-Do not install a source archive or assume that a GitHub Actions page downloads a plugin JAR.
+**Development preview only:** Actual coinflip wagering, escrow, payouts, storage and history are not implemented yet. Do not use these builds as a functioning coinflip gambling plugin.
 
 ## Requirements
 
@@ -121,7 +121,7 @@ Check out the target branch, install the corresponding JDK and Gradle, then run:
 gradle clean build
 ```
 
-The output JAR is created in `build/libs/`. GitHub Actions is configured to upload branch-specific JAR artifacts. Passing builds have not yet been confirmed.
+The output JAR is created in `build/libs/`. GitHub Actions is configured to upload branch-specific JAR artifacts. The development builds have passed GitHub Actions compilation and basic JAR-content validation. Runtime testing is not yet complete.
 
 ## License
 
